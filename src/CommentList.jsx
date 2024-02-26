@@ -7,7 +7,7 @@ const CommentsList = () => {
     { id: 3, text: "Это третий комментарий" }
   ]);
 
-  const handleDeleteCom = (id) => {
+  const handleDeleteComment = (id) => {
     setComments(comments.filter(comment => comment.id !== id));
   };
 
@@ -18,7 +18,7 @@ const CommentsList = () => {
         {comments.map(comment => (
           <li key={comment.id}>
             {comment.text}
-            <button onClick={() => handleDeleteCom(comment.id)}>Удалить</button>
+            <button onClick={() => handleDeleteComment(comment.id)}>Удалить</button>
           </li>
         ))}
       </ul>
